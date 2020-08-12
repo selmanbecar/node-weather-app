@@ -10,7 +10,8 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to find location', undefined)
         } else {
-            callback(undefined, body.main.temp - 273.15)
+            callback(undefined, "Temperatura iznosi" + (body.main.temp - 273.15) + " stepeni celziusa " + " minimalna temperatura iznosi: " + (body.main.temp_min - 273.15 )+ " ,a najvisa: " + (body.main.temp_max - 273.15)  )
+            
         }
     })
 }
